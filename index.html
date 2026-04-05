@@ -3,23 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>MyPortfolio</title>
 </head>
-<body>
-    <div>
-        <h1>Domagoj Čirko</h1>
-        <h2>Welcome to My Portfolio</h2>
-        <p>Full stack developer focused on Java Spring boot and Angular.js</p>
-    </div>
+<body class="bg-gray-800 text-gray-100 font-playfair-display">
+    <nav class="bg-gray-800 text-white p-6 max-w-5xl mx-auto sticky top-0">
+        <div class="flex justify-between items-center">
+            <h1 class="text-xl font-bold"><i class="fa-solid fa-laptop-code fa-lg"></i> dcirko</h1>
 
-    <div>
-        <h2>Projects</h2>
-        <ul>
-            <li>TrainFlow - Bachelor's thesis project, a web application for train scheduling and management. 
-            <a href="#">Live</a> | 
-            <a href="#">GitHub</a>
-            </li>
-        </ul>
-    </div>
+            <div class="hidden md:flex space-x-6">
+            <a href="#projects" class="hover:text-blue-400">Projects</a>
+            <a href="#about" class="hover:text-blue-400">About</a>
+            <a href="#contact" class="hover:text-blue-400">Contact</a>
+            </div>
+
+            <button id="menu-btn" class="md:hidden text-2xl">
+            <i class="fa-solid fa-bars fa-lg"></i>
+            </button>
+
+        </div>
+        <div id="menu" class="hidden flex flex-col space-y-4 mt-4 md:hidden">
+            <a href="#projects" class="hover:text-blue-400">Projects</a>
+            <a href="#about" class="hover:text-blue-400">About</a>
+            <a href="#contact" class="hover:text-blue-400">Contact</a>
+        </div>
+    </nav>
+
+    <section class="text-center py-20">
+        <h2 class="text-3xl md:text-6xl font-bold mb-4">
+        Hi, I'm Domagoj Čirko
+        </h2>
+
+        <p class="text-gray-400 text-lg mb-7">
+        Full Stack Developer mainly working in Java Spring Boot and Angular.js.
+        </p>
+
+        <a href="#projects" class="bg-blue-600 hover:bg-white hover:text-blue-600 px-6 py-3 rounded-lg">
+        View my projects
+        </a>
+    </section>
+
+    <section id="projects" class="max-w-5xl mx-auto px-6 py-16">
+        <h3 class="text-3xl font-bold mb-8">My Projects</h3>
+
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-gray-700 p-6 rounded-xl shadow hover:shadow-lg transition">
+                <h4 class="text-xl font-bold mb-2">Project 1</h4>
+                <p class="text-gray-400 mb-4">
+                Short description of your project.
+                </p>
+
+                <div class="space-x-4">
+                    <a href="#" class="text-blue-400 hover:underline hover:text-white">Live</a>
+                    <a href="#" class="text-blue-400 hover:underline hover:text-white">GitHub</a>
+                </div>
+            </div>
+            <div class="bg-gray-700 p-6 rounded-xl shadow hover:shadow-lg transition">
+                <h4 class="text-xl font-bold mb-2">Project 2</h4>
+                <p class="text-gray-400 mb-4">
+                Short description of your project.
+                </p>
+
+                <div class="space-x-4">
+                <a href="#" class="text-blue-400 hover:underline hover:text-white">Live</a>
+                <a href="#" class="text-blue-400 hover:underline hover:text-white">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="max-w-5xl mx-auto px-6 py-16">
+        <h3 class="text-3xl font-bold mb-4">About Me</h3>
+
+        <p class="text-gray-400 leading-relaxed">
+        I am a developer working with Java Spring Boot and Angular. I enjoy building scalable systems,
+        working with APIs, and creating clean UI experiences.
+        </p>
+    </section>
+
+    <section id="contact" class="text-center py-16">
+        <h3 class="text-3xl font-bold mb-4">Contact</h3>
+
+        <p class="text-gray-400 mb-6">
+        Feel free to reach out.
+        </p>
+
+        <div class="space-x-6"> 
+            <a href="https://github.com/dcirko" class="text-blue-400 hover:underline hover:text-white">
+                <i class="fa-brands fa-lg fa-github"></i> GitHub
+            </a>
+            <a href="https://github.com/dcirko" class="text-blue-400 hover:underline hover:text-white">
+                <i class="fa-brands fa-lg fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="mailto:you@example.com" class="text-blue-400 hover:underline hover:text-white">
+                <i class="fa-solid fa-at fa-lg"></i> Email
+            </a>
+        </div>
+    </section>
+
+    <footer class="text-center py-6 text-gray-500 text-sm">
+        © 2026 dcirko
+    </footer>
 </body>
+<script>
+    const btn = document.getElementById("menu-btn");
+    const menu = document.getElementById("menu");
+
+    btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+        
+    });
+
+    menu.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            menu.classList.add("hidden");
+        });
+    });
+</script>
 </html>
