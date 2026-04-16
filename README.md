@@ -48,23 +48,6 @@ Full-stack web application for managing workouts and training plans.
 
 ---
 
-### FoodieHub
-
-Web application for sharing recipes and managing meals.
-
-**Features:**
-- recipe management
-- meal planning
-- social-style interaction
-
-**Tech stack:**
-- Angular 21
-- Spring Boot
-- MySQL
-- Tailwind
-
----
-
 ## 🛠️ Tech Stack
 
 - Java (Spring Boot)
