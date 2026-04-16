@@ -5,7 +5,7 @@ Personal portfolio website showcasing my background, technical skills, and selec
 ## 🌐 Live Demo
 
 Portfolio available at:  
-👉 https://dcirko.github.io/
+👉 https://dcirko.github.io/MyPortfolioPage/
 
 ---
 
